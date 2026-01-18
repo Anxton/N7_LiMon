@@ -74,6 +74,8 @@ npm run dev
 
 ## Frontend
 
+Please find the frontend project [here](https://github.com/ThomasGRN/ProjetArduino_LiMon_mob_app).
+
 # Notes
 
 - Ensure that your Raspberry Pi has a camera module connected and enabled.

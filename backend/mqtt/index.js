@@ -6,7 +6,6 @@ const brokerUrl = process.env.MQTT_BROKER_URL || "mqtt://localhost:1883";
 const client = mqtt.connect(brokerUrl);
 const mqttTopic = process.env.MQTT_TOPIC || "limon";
 
-
 client.on("connect", () => {
     console.log(`[+] MQTT connected to ${brokerUrl}`);
     client.subscribe(mqttTopic);
@@ -20,6 +19,7 @@ client.on("message", (topic, message) => {
     const parsedPayload = parseMQTTPayload(message);
     if (!parsedPayload) return;
 
+    // Store snapshot
     snapshotStore.add({
         people: parsedPayload.people ?? null,
         receivedAt: new Date().toUTCString()

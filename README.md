@@ -83,4 +83,4 @@ npm run dev
 
 - Developed by Group L3 as part of the ENSEEIHT curriculum.
 - Uses [Eclipse Mosquitto](https://mosquitto.org/) for the MQTT broker.
-- Uses the model [YapaLab/yolo-face v11](https://github.com/YapaLab/yolo-face) using Ultralytics YOLO for face detection.
+- Uses the model [YapaLab/yolo-face v11](https://github.com/YapaLab/yolo-face) using [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) for face detection.

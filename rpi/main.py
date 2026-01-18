@@ -4,7 +4,6 @@ import time
 import numpy as np
 from picamera2 import Picamera2
 
-
 import paho.mqtt.client as mqtt
 
 mqtt_broker_ip = "mqtt.alcoolis.me"
@@ -238,7 +237,7 @@ def live_camera_detection_picamera2(model_path='yolov8n.pt'):
             #add_text_overlay(processed_frame, inference_time, fps, average_people_count)
             #cv2.imshow('YOLOv8 detection + compteur de tetes', processed_frame)
             
-            mqttc.publish("limon", average_people_count)
+            mqttc.publish("limon", f'{{"people": {average_people_count}}}')
             
             print(f"nb_personnes : {average_people_count}")
             print(f"fps : {fps}")

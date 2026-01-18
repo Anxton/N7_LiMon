@@ -2,12 +2,13 @@ const mqtt = require("mqtt");
 const snapshotStore = require("../store/snapshot.store");
 const { parseMQTTPayload } = require("../utils/mqtt.utils");
 
-const client = mqtt.connect(process.env.MQTT_BROKER_URL);
+const brokerUrl = process.env.MQTT_BROKER_URL || "mqtt://localhost:1883";
+const client = mqtt.connect(brokerUrl);
 const mqttTopic = process.env.MQTT_TOPIC || "limon";
 
 
 client.on("connect", () => {
-    console.log(`[+] MQTT connected to ${process.env.MQTT_BROKER_URL}`);
+    console.log(`[+] MQTT connected to ${brokerUrl}`);
     client.subscribe(mqttTopic);
     console.log(`[+] Subscribed to topic: ${mqttTopic}`);
 });

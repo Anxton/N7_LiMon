@@ -23,6 +23,10 @@ Anton
 - **Backend Server**: Receives data from the Raspberry Pi, stores it, and provides an API for data retrieval and analysis.
 - **Frontend Application**: A web-based interface that allows users to monitor real-time data and view historical analytics.
 
+## Raspberry Pi Setup
+
+![Raspberry Pi Setup](./rpi/setup.png)
+
 # Build & Run
 
 ## MQTT Broker

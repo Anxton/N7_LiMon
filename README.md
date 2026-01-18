@@ -25,13 +25,11 @@ cd rpi
 
 Run the installation script to set up the virtual environment and install dependencies:
 ```bash
-chmod +x install.sh
 ./install.sh
 ```
 
 Run the application:
 ```bash
-chmod +x run.sh
 ./run.sh
 ```
 
